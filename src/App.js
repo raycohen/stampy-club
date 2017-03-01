@@ -10,6 +10,46 @@ import craStars from './cra-stars.png';
 import './App.css';
 
 class App extends Component {
+
+
+  fastlyNodes() {
+    return (
+      <div>
+        <div className="fastly-divider">
+          <h1>Fastly</h1>
+        </div>
+        <div className="App-section">
+          <h2>Edge Dictionaries</h2>
+          <div className='body-text body-text-dict'>
+            <a target="_blank" href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-manipulating-dictionary-items">API Guide</a>
+            <br/>
+            Never Hit Origin:
+          </div>
+
+          <img src={vclOne} className="App-image" />
+          ...
+          <img src={vclTwo} className="App-image" />
+        </div>
+        <div className="App-section">
+          <h2>ember-cli-deploy-fastly-edge-dictionary</h2>
+          <div className="body-text">
+            <a target="_blank" href='https://github.com/raycohen/ember-cli-deploy-fastly-edge-dictionary'>
+              Github Repo
+            </a>
+          </div>
+        </div>
+        <div className="App-section">
+          <h2>This page</h2>
+          <div className="body-text">
+            <a target="_blank" href='https://github.com/raycohen/stampy-club'>
+              Github Repo
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="App">
@@ -116,37 +156,6 @@ class App extends Component {
             {' '}
             and passes the static output files to the rest of the pipeline.
           </p>
-        </div>
-        <div className="fastly-divider">
-          <h1>Fastly</h1>
-        </div>
-        <div className="App-section">
-          <h2>Edge Dictionaries</h2>
-          <div className='body-text body-text-dict'>
-            <a target="_blank" href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-manipulating-dictionary-items">API Guide</a>
-            <br/>
-            Never Hit Origin:
-          </div>
-
-          <img src={vclOne} className="App-image" />
-          ...
-          <img src={vclTwo} className="App-image" />
-        </div>
-        <div className="App-section">
-          <h2>ember-cli-deploy-fastly-edge-dictionary</h2>
-          <div className="body-text">
-            <a target="_blank" href='https://github.com/raycohen/ember-cli-deploy-fastly-edge-dictionary'>
-              Github Repo
-            </a>
-          </div>
-        </div>
-        <div className="App-section">
-          <h2>This page</h2>
-          <div className="body-text">
-            <a target="_blank" href='https://github.com/raycohen/stampy-club'>
-              Github Repo
-            </a>
-          </div>
         </div>
         <div className="App-section">
           <h2>paperless.club was $$$</h2>

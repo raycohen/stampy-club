@@ -14,8 +14,33 @@
   color: white;
 }
 
-.App-intro {
+.mono {
+  font-family: monospace;
+}
+
+.App-section {
   font-size: large;
+  margin-top: 40px;
+  min-height: 40px;
+}
+
+.App-section:last-child {
+  margin-bottom: 240px;
+}
+
+.App-image {
+  max-width: 1000px;
+  border: 2px dashed green;
+  display: block;
+  margin: 0px auto;
+}
+
+.public-url-image {
+  max-width: 1300px;
+}
+
+.body-text {
+  font-size: larger;
 }
 
 @keyframes App-logo-spin {

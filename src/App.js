@@ -5,6 +5,7 @@ import normalBuild from './normal-build.png';
 import publicUrlBuild from './public-url-build.png';
 import vclOne from './vcl-one.png';
 import vclTwo from './vcl-two.png';
+import paperlessClub from './paperless-club.png';
 import './App.css';
 
 class App extends Component {
@@ -80,6 +81,10 @@ class App extends Component {
               Github Repo
             </a>
           </div>
+        </div>
+        <div className="App-section">
+          <h2>paperless.club was $$$</h2>
+          <img src={paperlessClub} className="App-image" />
         </div>
       </div>
     );

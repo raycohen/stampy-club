@@ -158,6 +158,30 @@ class App extends Component {
           </p>
         </div>
         <div className="App-section">
+          <h2>Storing and Delivering index.html from a build</h2>
+          <p>
+            There are many options depending on your situation. They include:
+            <ul>
+              <li>
+                Manually paste the file into a Rails view template and deploy the entire app server.
+              </li>
+              <li>
+                Store them in redis and have a rails controller read them out and serve them
+              </li>
+              <li>
+                Store them in s3 and have a rails controller fetch and deliver them
+              </li>
+              <li>
+                Store them in s3 and configure the CDN to deliver them for specific request urls
+              </li>
+              <li>
+                Store them in the CDN's key-value store and deliver them directly (*)
+              </li>
+            </ul>
+            * This page uses a Fastly key-value store, so the index.html can be served without ever hitting our rails server or s3
+          </p>
+        </div>
+        <div className="App-section">
           <h2>paperless.club was $$$</h2>
           <img src={paperlessClub} className="App-image" />
         </div>

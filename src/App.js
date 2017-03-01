@@ -6,6 +6,7 @@ import publicUrlBuild from './public-url-build.png';
 import vclOne from './vcl-one.png';
 import vclTwo from './vcl-two.png';
 import paperlessClub from './paperless-club.png';
+import craStars from './cra-stars.png';
 import './App.css';
 
 class App extends Component {
@@ -14,15 +15,55 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Stampy Club</h2>
+          <h2>Deploying <span className='mono'>create-react-app</span> apps</h2>
+        </div>
+        <div className="App-section">
+          <h2>What is create-react-app?</h2>
+          <p>
+            CRA is a popular convention-based project setup for building React apps. With no additional setup it provides:
+            <ul>
+              <li>webpack build configuration</li>
+              <li>babel configuration for es6 features</li>
+              <li>a development server</li>
+              <li>CSS autoprefixing</li>
+              <li>live-reloading styles</li>
+              <li>linting with ESLint</li>
+              <li>testing with Jest</li>
+            </ul>
+            <img src={craStars} width="200" alt="really popular" /><br/>
+            It is in the early stages and improving rapidly with a lot of community support.
+          </p>
+
+          <h3>Does Paperless Post use it?</h3>
+          <p>
+            <ul>
+              <li>
+                DISCO is using it for a new mobile version of the Paper Browser.
+                {' '}
+                <a target="_blank" href="https://github.com/paperlesspost/paper-browser-redux">github repo</a>
+              </li>
+              <li>
+                 The Snugbag project uses it.
+                 <a target="_blank" href="https://github.com/paperlesspost/snugbag/">github repo</a>
+              </li>
+              <li>
+                This page uses it.
+                {' '}
+                <a target="_blank" href='https://github.com/raycohen/stampy-club'>github repo</a>
+              </li>
+            </ul>
+
+            Moving forward, is is the likely choice for all new React-based projects.
+            Using it means we get a lot of nice conveniences without minimal setup effort.
+          </p>
         </div>
         <div className="App-section">
           <h2>Last Time</h2>
-          <div className="body-text">
+          <p>
             Showed deploying an ember app with s3 & redis.
             <br/>
             Since then...
-          </div>
+          </p>
         </div>
         <div className="App-section">
           <h2>

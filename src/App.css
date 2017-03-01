@@ -14,12 +14,25 @@
   color: white;
 }
 
+.App-header h2 .mono {
+  font-size: larger;
+}
+
 .fastly-divider {
   margin-top: 40px;
   background-color: #E82C2A;
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+
+p {
+  text-align: left;
+  width: 700px;
+  margin: 0px auto 40px;
+  line-height: 1.4;
+  font-size: 18px;
 }
 
 .fastly-divider .App-logo {

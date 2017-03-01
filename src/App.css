@@ -14,8 +14,24 @@
   color: white;
 }
 
+.fastly-divider {
+  margin-top: 40px;
+  background-color: #E82C2A;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.fastly-divider .App-logo {
+  background-color: black;
+}
+
 .mono {
   font-family: monospace;
+}
+
+.body-text-dict {
+  margin-bottom: 28px;
 }
 
 .App-section {

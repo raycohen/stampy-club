@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import publicUrlPr from './public_url-pr.png';
 import normalBuild from './normal-build.png';
 import publicUrlBuild from './public-url-build.png';
+import vclOne from './vcl-one.png';
+import vclTwo from './vcl-two.png';
 import './App.css';
 
 class App extends Component {
@@ -35,6 +37,30 @@ class App extends Component {
             </a>
             {' '}
             instead of building the ember app.
+          </div>
+        </div>
+        <div className="fastly-divider">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Fastly</h2>>
+        </div>
+        <div className="App-section">
+          <h2>Edge Dictionaries</h2>
+          <div className='body-text body-text-dict'>
+            <a href="https://docs.fastly.com/guides/edge-dictionaries/creating-and-manipulating-dictionary-items">API Guide</a>
+            <br/>
+            Never Hit Origin:
+          </div>
+
+          <img src={vclOne} className="App-image" />
+          ...
+          <img src={vclTwo} className="App-image" />
+        </div>
+        <div className="App-section">
+          <h2>ember-cli-deploy-fastly-edge-dictionary</h2>
+          <div className="body-text">
+            <a href='https://github.com/raycohen/ember-cli-deploy-fastly-edge-dictionary'>
+              Github Repo
+            </a>
           </div>
         </div>
       </div>

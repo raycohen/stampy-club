@@ -45,6 +45,7 @@ class App extends Component {
               </li>
               <li>
                  The Snugbag project uses it.
+                 {' '}
                  <a target="_blank" href="https://github.com/paperlesspost/snugbag/">github repo</a>
               </li>
               <li>
@@ -54,7 +55,7 @@ class App extends Component {
               </li>
             </ul>
 
-            Moving forward, is is the likely choice for all new React-based projects.
+            Moving forward, it is the likely choice for all new React-based projects.
             Using it means we get a lot of nice conveniences without minimal setup effort.
           </p>
         </div>
@@ -93,27 +94,27 @@ class App extends Component {
         </div>
 
         <div className="App-section">
-          <h2>
-            Previous
+          <h2>ember-cli-deploy + create-react-app</h2>
+          <p>
+            In a previous
             {' '}
             <a href="https://indoctrination.paperlesspost.net/docs/dev/dev_o_clock/previous-talks">talk</a>
             {' '}
-            covered ember-cli-deploy for ember apps
-          </h2>
-          <p>
-            This PUBLIC_URL feature is all that was missing for CRA apps to be used with ember-cli-deploy.
-            Before this, it could upload the assets but they wouldn't be referenced properly.
-          </p>
-          <h3>ember-cli-deploy-create-react-app</h3>
-          <p>
-            ember-cli-deploy has a build step where it normally runs the ember build to create the static files we need.
-            This plugin replaces that build step with one that
+            I covered ember-cli-deploy for deploying ember apps. Now ember-cli-deploy can work with react apps!
+            <h3>ember-cli-deploy-create-react-app</h3>
+            The ember-cli-deploy-create-react-app hooks in to ember-cli-deploy's build step where it
+            would normally run the ember build to create the static files we need.
+            Instead, you
+            {' '}
+            <a target="_blank" href="https://github.com/raycohen/stampy-club/blob/master/config/deploy.js#L34-L36">specify</a>
+            {' '}
+            the PUBLIC_URL in config/deploy.js and it
             {' '}
             <a target="_blank" href='https://github.com/raycohen/ember-cli-deploy-create-react-app/blob/master/index.js#L70-L91'>
               builds the CRA app
             </a>
             {' '}
-            and uses the staic files it creates instead!
+            and passes the static output files to the rest of the pipeline.
           </p>
         </div>
         <div className="fastly-divider">

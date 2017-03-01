@@ -29,6 +29,7 @@ class App extends Component {
               <li>live-reloading styles</li>
               <li>linting with ESLint</li>
               <li>testing with Jest</li>
+              <li>production builds</li>
             </ul>
             <img src={craStars} width="200" alt="really popular" /><br/>
             It is in the early stages and improving rapidly with a lot of community support.
@@ -58,38 +59,62 @@ class App extends Component {
           </p>
         </div>
         <div className="App-section">
-          <h2>Last Time</h2>
+          <h2>CRA Production Builds</h2>
           <p>
-            Showed deploying an ember app with s3 & redis.
-            <br/>
-            Since then...
+            CRA provides the ability to create production builds. Doing so gives you:
+            <ul>
+              <li>minification</li>
+              <li>source maps</li>
+              <li>fingerprinted filenames like main.abc123.js for safe caching</li>
+              <li>an index.html file referencing those files</li>
+            </ul>
           </p>
-        </div>
-        <div className="App-section">
-          <h2>
-            <a target="_blank" href="https://github.com/facebookincubator/create-react-app/pull/1504">CRA PUBLIC_URL PR</a>
-          </h2>
+          <h3>index.html from `npm run build`</h3>
+          <img src={normalBuild} className="App-image" />
+          <p style={{'margin-top': '20px'}}>
+            With these local paths, serving static assets from a CDN is problematic.
+            The files will be refernced relative to the path the html is served from which may not be what we want.
+          </p>
+          <h3>
+            Earlier this month: <a target="_blank" href="https://github.com/facebookincubator/create-react-app/pull/1504">CRA PUBLIC_URL PR</a> landed
+          </h3>
           <img src={publicUrlPr} className="App-image" />
         </div>
         <div className="App-section">
-          <h2 className='mono'>npm run build</h2>
-          <img src={normalBuild} className="App-image" />
-        </div>
-        <div className="App-section">
-          <h2 className='mono'>PUBLIC_URL=https://s3.amazonaws.com/stampyclub/stampy-club/ npm run build</h2>
+          <p>
+            It allows you to specify the full path for your assets.
+            For example, if you upload your build files to an s3 bucket, you can specify the path to that bucket
+          </p>
+          <h3 className='mono'>PUBLIC_URL=https://s3.amazonaws.com/stampyclub/stampy-club/ npm run build</h3>
           <img src={publicUrlBuild} className="App-image public-url-image" />
+          <p style={{'margin-top': '20px'}}>
+            Now you can serve this html from any path and your assets will load properly
+          </p>
         </div>
+
         <div className="App-section">
-          <h2>ember-cli-deploy-create-react-app</h2>
-          <div className="body-text">
-            It
+          <h2>
+            Previous
+            {' '}
+            <a href="https://indoctrination.paperlesspost.net/docs/dev/dev_o_clock/previous-talks">talk</a>
+            {' '}
+            covered ember-cli-deploy for ember apps
+          </h2>
+          <p>
+            This PUBLIC_URL feature is all that was missing for CRA apps to be used with ember-cli-deploy.
+            Before this, it could upload the assets but they wouldn't be referenced properly.
+          </p>
+          <h3>ember-cli-deploy-create-react-app</h3>
+          <p>
+            ember-cli-deploy has a build step where it normally runs the ember build to create the static files we need.
+            This plugin replaces that build step with one that
             {' '}
             <a target="_blank" href='https://github.com/raycohen/ember-cli-deploy-create-react-app/blob/master/index.js#L70-L91'>
-              runs the react build command
+              builds the CRA app
             </a>
             {' '}
-            instead of building the ember app.
-          </div>
+            and uses the staic files it creates instead!
+          </p>
         </div>
         <div className="fastly-divider">
           <img src={logo} className="App-logo" alt="logo" />

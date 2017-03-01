@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Deploying <span className='mono'>create-react-app</span> apps</h2>
+          <h1>Deploying <span className='mono'>create-react-app</span> apps</h1>
         </div>
         <div className="App-section">
           <h2>What is create-react-app?</h2>
@@ -117,8 +117,7 @@ class App extends Component {
           </p>
         </div>
         <div className="fastly-divider">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Fastly</h2>
+          <h1>Fastly</h1>
         </div>
         <div className="App-section">
           <h2>Edge Dictionaries</h2>

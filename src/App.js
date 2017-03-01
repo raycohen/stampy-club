@@ -114,7 +114,7 @@ class App extends Component {
           <img src={normalBuild} className="App-image" />
           <p style={{'margin-top': '20px'}}>
             With these local paths, serving static assets from a CDN is problematic.
-            The files will be refernced relative to the path the html is served from which may not be what we want.
+            The files will be referenced relative to the path the html is served from which may not be what we want.
           </p>
           <h3>
             Earlier this month: <a target="_blank" href="https://github.com/facebookincubator/create-react-app/pull/1504">CRA PUBLIC_URL PR</a> landed

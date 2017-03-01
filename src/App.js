@@ -158,7 +158,7 @@ class App extends Component {
           </p>
         </div>
         <div className="App-section">
-          <h2>Storing and Delivering index.html from a build</h2>
+          <h2>Storing and delivering index.html from a build</h2>
           <p>
             There are many options depending on your situation. They include:
             <ul>

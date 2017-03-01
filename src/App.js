@@ -16,7 +16,17 @@ class App extends Component {
           <h2>Stampy Club</h2>
         </div>
         <div className="App-section">
-          <h2>PUBLIC_URL PR</h2>
+          <h2>Last Time</h2>
+          <div className="body-text">
+            Showed deploying an ember app with s3 & redis.
+            <br/>
+            Since then...
+          </div>
+        </div>
+        <div className="App-section">
+          <h2>
+            <a href="https://github.com/facebookincubator/create-react-app/pull/1504">CRA PUBLIC_URL PR</a>
+          </h2>
           <img src={publicUrlPr} className="App-image" />
         </div>
         <div className="App-section">
@@ -41,7 +51,7 @@ class App extends Component {
         </div>
         <div className="fastly-divider">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Fastly</h2>>
+          <h2>Fastly</h2>
         </div>
         <div className="App-section">
           <h2>Edge Dictionaries</h2>
@@ -59,6 +69,14 @@ class App extends Component {
           <h2>ember-cli-deploy-fastly-edge-dictionary</h2>
           <div className="body-text">
             <a href='https://github.com/raycohen/ember-cli-deploy-fastly-edge-dictionary'>
+              Github Repo
+            </a>
+          </div>
+        </div>
+        <div className="App-section">
+          <h2>This page</h2>
+          <div className="body-text">
+            <a href='https://github.com/raycohen/stampy-club'>
               Github Repo
             </a>
           </div>

@@ -3,10 +3,6 @@
 module.exports = function(deployTarget) {
   var ENV = {
     build: {},
-    redis: {
-      allowOverwrite: true,
-      keyPrefix: 'react-deployer:index'
-    },
     s3: {
       prefix: 'stampy-club'
     }
